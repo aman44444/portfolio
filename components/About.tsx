@@ -39,8 +39,9 @@ function About({ isVisible, onClose }) {
                     </div>
                     <div className='m-8 font-extralight '>
                         <h3 >Description</h3>
-                        <p className='text-gray-400 '>I'm btech graduate major in electronical and electromincs
-                         im currently doing openspirce contribution and working on my projects 
+                        
+                        <p className='text-gray-400 '>I am btech graduate major in electrical and electronics
+                         I am currently contributing in open source projects and working on my own projects 
                         </p>
                     </div>
 
