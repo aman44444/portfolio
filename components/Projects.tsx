@@ -52,21 +52,35 @@ function Project({ isProjectVisible, onClose }) {
             
             }}>
             <Card
-              title=""
-              description="It is the task manager web with alarm"
+              title="TodoList"
+              description="It is the task manager web app with alarm"
             />
           </div>
-          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl">
+          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
+           style={{
+            backgroundImage: `url('/assets/images/foodgram.png')`,
+            
+            backgroundRepeat: "no-repeat",
+            backgroundSize:" contain",
+            
+            }}>
             <Card
-              title="Card Title"
-              description=""
+              title="Foodgram"
+              description="It is a Food delivery app with excellent UI"
             />
           </div>
 
-          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl">
+          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
+           style={{
+            backgroundImage: `url('/assets/images/weather.png')`,
+            
+            backgroundRepeat: "no-repeat",
+            backgroundSize:" contain",
+            
+            }}>
             <Card
-              title="Card Title"
-              description=""
+              title="Weather App"
+              description="It is a Weather App built by using weather api"
             />
           </div>
         </div>
