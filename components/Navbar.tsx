@@ -25,7 +25,7 @@ function Navbar() {
          About
         </li>
         <li onClick={()=>setShowProject(true)}>Projects</li>
-        <li>Contact</li>
+        <li><a href='mailto:amancorp04@gmail.com'>Contact</a></li>
        </ul>
         <span className="absolute right-3 text-2xl top-0 cursor-pointer" onClick={()=>setToggle(false)}>&times;</span>
       </div>

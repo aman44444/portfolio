@@ -31,17 +31,20 @@ function About({ isVisible, onClose }) {
                         <h3>Aman</h3>
                         <p className='text-gray-400 text-xs flex'> <MdLocationOn className='text-black text-xl' /> Bhopal ,Madhaya Pradesh</p>
                         <div className='flex gap-3'>
+                        <a href='https://github.com/aman44444' target='_blank' rel='noopener noreferrer'>
                             <BsGithub />
+                        </a>    
                             <BsTwitter />
+                        <a href='mailto:amancorp04@gmail.com'>
                             <BiLogoGmail />
+                        </a>
                         </div>
 
                     </div>
                     <div className='m-8 font-extralight '>
                         <h3 >Description</h3>
                         
-                        <p className='text-gray-400 '>I am btech graduate major in electrical and electronics
-                         I am currently contributing in open source projects and working on my own projects 
+                        <p className='text-gray-400 '>I hold a B.Tech degree in Electrical and Electronics. Currently, I contribute to open-source projects and am actively involved in my own innovative ventures. 
                         </p>
                     </div>
 
