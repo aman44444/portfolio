@@ -44,7 +44,7 @@ function About({ isVisible, onClose }) {
                     <div className='m-8 font-extralight '>
                         <h3 >Description</h3>
                         
-                        <p className='text-gray-400 '>I hold a B.Tech degree in Electrical and Electronics. Currently, I contribute to open-source projects and am actively involved in my own innovative ventures. 
+                        <p className='text-gray-400 '>
                         </p>
                     </div>
 
