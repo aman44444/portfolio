@@ -14,7 +14,7 @@ function Body() {
           
           </div>
             <Image
-                src='/assets/images/IMG_kge6dq-removebg-preview.jpg'
+                src='/assets/images/front.jpg'
                 alt="Profile pic"
                 width={250}
                 height={250}

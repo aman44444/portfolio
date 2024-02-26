@@ -31,7 +31,7 @@ function Project({ isProjectVisible, onClose }) {
           <div
             className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
             style={{
-              backgroundImage: `url('/assets/images/images.png')`,
+              backgroundImage: `url('/assets/images/wordle.png')`,
 
               backgroundRepeat: "no-repeat",
               backgroundSize: " contain",

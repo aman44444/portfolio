@@ -34,7 +34,7 @@ function About({ isVisible, onClose }) {
         </div>
         <div className="bg-white rounded">
           <Image
-            src="/assets/images/IMG_kge6dq-removebg-preview.jpg"
+            src="/assets/images/front.jpg"
             alt="Profile pic"
             width={100}
             height={100}
