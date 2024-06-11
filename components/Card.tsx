@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -12,12 +11,14 @@ const Card = ({ title, description }) => {
 
   return (
     <motion.div
-      className={`relative w-full h-70 bg-white shadow-xl  transition-all duration-300  ${
-        isExpanded ? 'h-full' : 'h-2/4'
+      className={`relative w-full bg-white shadow-xl transition-all duration-300 ${
+        isExpanded ? 'h-full' : 'h-40'
       }`}
       whileHover={{ translateY: isExpanded ? 0 : -16 }}
       onMouseEnter={toggleExpansion}
       onMouseLeave={toggleExpansion}
+      role="button"
+      aria-expanded={isExpanded}
     >
       <div className="p-4">
         <h2 className="text-lg font-semibold">{title}</h2>

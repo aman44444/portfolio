@@ -5,84 +5,58 @@ import Card from "./Card";
 function Project({ isProjectVisible, onClose }) {
   if (!isProjectVisible) return null;
 
-  // const handleClick = (e: { target: { id: string } }) => {
-  //     if(e.target.id === 'wrapper') onClose()
-  // }
-
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center"
       id="wrapper"
     >
-      <div className="w-3/4 h-3/4 bg-white  rounded-xl absolute">
-        <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-3xl flex items-center ">
-          <h2 className="absolute left-12 font-semibold">Projects</h2>
+      <div className="w-3/4 h-3/4 bg-white rounded-xl relative">
+        <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-3xl flex items-center px-6 py-4">
+          <h2 className="text-3xl font-semibold">Projects</h2>
           <button
-            className="text-black text-sm place-self-end absolute right-3 font-bold bg-white top-3 rounded-full h-8 w-8"
+            className="ml-auto text-black text-sm font-bold bg-white rounded-full h-8 w-8 flex items-center justify-center"
             onClick={() => onClose()}
+            aria-label="Close"
           >
             X
           </button>
         </div>
         <div
-          className=" h-3/4 flex flex-wrap w-full gap-6 justify-center
-                items-center "
-        >
-          <div
-            className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
-            style={{
-              backgroundImage: `url('/assets/images/wordle.png')`,
-
-              backgroundRepeat: "no-repeat",
-              backgroundSize: " contain",
-            }}
-          >
-            <Card
-              title="WordleXkbc"
-              description="It is Word guessing game based on Wordle and KBC theme."
-            />
-          </div>
-
-          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
-          style={{
-            backgroundImage: `url('/assets/images/todolist.png')`,
-            
-            backgroundRepeat: "no-repeat",
-            backgroundSize:" contain",
-            
-            }}>
-            <Card
-              title="TodoList"
-              description="It is the task manager web app with alarm"
-            />
-          </div>
-          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
-           style={{
-            backgroundImage: `url('/assets/images/foodgram.png')`,
-            
-            backgroundRepeat: "no-repeat",
-            backgroundSize:" contain",
-            
-            }}>
-            <Card
-              title="Foodgram"
-              description="It is a Food delivery app with excellent UI"
-            />
-          </div>
-
-          <div className="h-40 w-1/4 bg-black right-10 flex flex-wrap items-end rounded-xl"
-           style={{
-            backgroundImage: `url('/assets/images/weather.png')`,
-            
-            backgroundRepeat: "no-repeat",
-            backgroundSize:" contain",
-            
-            }}>
-            <Card
-              title="Weather App"
-              description="It is a Weather App built by using weather api"
-            />
-          </div>
+          className=" h-3/4 flex flex-wrap w-full gap-6 justify-center items-center p-4 overflow-auto">
+          {[
+            {
+              title: "WordleXkbc",
+              description: "It is a word guessing game based on Wordle and KBC theme.",
+              image: "/assets/images/wordle.png",
+            },
+            {
+              title: "TodoList",
+              description: "It is a task manager web app with an alarm.",
+              image: "/assets/images/todolist.png",
+            },
+            {
+              title: "Foodgram",
+              description: "It is a food delivery app with excellent UI.",
+              image: "/assets/images/foodgram.png",
+            },
+            {
+              title: "Weather App",
+              description: "It is a weather app built using a weather API.",
+              image: "/assets/images/weather.png",
+            },
+          ].map((project, index) => (
+            <div
+              key={index}
+              className="relative h-40 w-1/4 bg-black rounded-xl flex items-end"
+              style={{
+                backgroundImage: `url(${project.image})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+            >
+              <Card title={project.title} description={project.description} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

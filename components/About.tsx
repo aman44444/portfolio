@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
 import { MdLocationOn } from "react-icons/md";
@@ -6,45 +5,38 @@ import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BiLogoGmail } from "react-icons/bi";
 
-function About({ isVisible, onClose }) {
+const About = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
-
-  // const handleClick = (e: { target: { id: string } }) => {
-  //     if(e.target.id === 'wrapper') onClose()
-  // }
-  const style = {
-    borderRadius: "50%",
-    marginInline: "2.5rem",
-    marginTop: "2rem",
-  };
+  
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center"
       id="wrapper"
     >
-      <div className="w-3/4 h-3/4 bg-white  rounded-xl absolute">
-        <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-3xl flex items-center ">
-          <h2 className="absolute left-12 font-semibold">About</h2>
+      <div className=" realtive w-3/4 h-3/4 bg-white rounded-xl">
+        <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-3xl flex items-center justify-between px-6 py-4">
+          <h2 className="text-3xl font-semibold">About</h2>
           <button
-            className="text-black text-sm place-self-end absolute right-3 font-bold bg-white top-3 rounded-full h-8 w-8"
+            className="text-black font-bold  bg-white top-3 rounded-full h-8 w-8  flex items-center justify-center"
             onClick={() => onClose()}
+            aria-label="Close"
           >
             X
           </button>
         </div>
-        <div className="bg-white rounded">
+        <div className="flex flex-col items-start mt-8 px-8">
           <Image
             src="/assets/images/front.jpg"
             alt="Profile pic"
             width={100}
             height={100}
-            style={style}
+            className="rounded-full mb-4"
           />
-          <div className="m-8 font-semibold">
-            <h3>Aman</h3>
+          <div>
+            <h3 className="text-xl font-semibold">Aman</h3>
             <p className="text-gray-400 text-xs flex">
-              {" "}
-              <MdLocationOn className="text-black text-xl" /> Bhopal ,Madhaya
+              
+              <MdLocationOn className="text-black text-xl mr-1" /> Bhopal ,Madhaya
               Pradesh
             </p>
             <div className="flex gap-3">
@@ -52,20 +44,25 @@ function About({ isVisible, onClose }) {
                 href="https://github.com/aman44444"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-xl"
               >
                 <BsGithub />
               </a>
               <BsTwitter />
-              <a href="mailto:amancorp04@gmail.com">
+              <a href="mailto:amancorp04@gmail.com"
+              aria-label="Email"
+              className="text-xl">
                 <BiLogoGmail />
               </a>
             </div>
           </div>
-          <div className="m-8 font-extralight ">
-            <h3>Description</h3>
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold">Description</h3>
 
-            <p className="text-gray-400 ">
-              I'm a recent graduate with a Bachelor's degree in Electrical and
+            <p className="text-gray-400  mt-2 ">
+             
+              I am a recent graduate with a Bachelor&apos; degree in Electrical and
               Electronics Engineering. Passionate about technology and
               problem-solving, I actively contribute to open-source projects,
               collaborating with developers globally. Eager to leverage my
