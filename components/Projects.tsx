@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Card from "./Card";
+import Image from "next/image";
 
 function Project({ isProjectVisible, onClose }) {
   if (!isProjectVisible) return null;
@@ -47,14 +47,18 @@ function Project({ isProjectVisible, onClose }) {
           ].map((project, index) => (
             <div
               key={index}
-              className="relative h-40 w-1/4 bg-black rounded-xl flex items-end"
+              className="relative h-40 w-1/4 bg-black rounded-xl flex items-end flex-wrap"
               style={{
                 backgroundImage: `url(${project.image})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
+               
               }}
             >
+              
+               
               <Card title={project.title} description={project.description} />
+              
             </div>
           ))}
         </div>
