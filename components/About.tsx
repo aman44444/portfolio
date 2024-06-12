@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
 import { MdLocationOn } from "react-icons/md";
@@ -17,7 +18,7 @@ const About = ({ isVisible, onClose }) => {
         <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-3xl flex items-center justify-between px-6 py-4">
           <h2 className="text-3xl font-semibold">About</h2>
           <button
-            className="text-black font-bold  bg-white top-3 rounded-full h-8 w-8  flex items-center justify-center"
+            className="text-black font-bold  text-sm bg-white top-3 rounded-full h-8 w-8  flex items-center justify-center"
             onClick={() => onClose()}
             aria-label="Close"
           >
@@ -62,12 +63,7 @@ const About = ({ isVisible, onClose }) => {
 
             <p className="text-gray-400  mt-2 ">
              
-              I am a recent graduate with a Bachelor&apos; degree in Electrical and
-              Electronics Engineering. Passionate about technology and
-              problem-solving, I actively contribute to open-source projects,
-              collaborating with developers globally. Eager to leverage my
-              skills and enthusiasm in a dynamic role where I can continue to
-              learn and make meaningful contributions.
+            I am a recent graduate with a Bachelor's degree in Electrical and Electronics Engineering, driven by a profound passion for technology and a keen aptitude for problem-solving. My commitment to advancing the field is demonstrated through active contributions to open-source projects, where I collaborate with a diverse community of developers from around the globe. I am eager to bring my skills and enthusiasm to a dynamic role, where I can continue to learn, grow, and make impactful contributions.
             </p>
           </div>
         </div>

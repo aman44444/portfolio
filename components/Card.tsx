@@ -23,7 +23,7 @@ const Card = ({ title, description }) => {
       <div className="p-4">
         <h2 className="text-lg font-semibold">{title}</h2>
         {isExpanded && (
-          <p className="text-gray-600 mt-2 rounded-t-xl">{description}</p>
+          <p className="text-gray-600 mt-2 text-xs rounded-t-xl">{description}</p>
         )}
       </div>
     </motion.div>

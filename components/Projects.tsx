@@ -26,22 +26,22 @@ function Project({ isProjectVisible, onClose }) {
           {[
             {
               title: "WordleXkbc",
-              description: "It is a word guessing game based on Wordle and KBC theme.",
+              description: "A unique Wordle clone infused with the excitement of 'Kaun Banega Crorepati,' combining word guessing with thrilling quiz elements",
               image: "/assets/images/wordle.png",
             },
             {
               title: "TodoList",
-              description: "It is a task manager web app with an alarm.",
+              description: "A versatile to-do list app equipped with an alarm feature, designed to help you manage tasks efficiently and stay on schedule.",
               image: "/assets/images/todolist.png",
             },
             {
               title: "Foodgram",
-              description: "It is a food delivery app with excellent UI.",
+              description: "An intuitive food delivery web app offering a seamless user experience, designed to bring your favorite meals right to your doorstep.",
               image: "/assets/images/foodgram.png",
             },
             {
               title: "Weather App",
-              description: "It is a weather app built using a weather API.",
+              description: "A sleek weather web app that provides accurate, real-time forecasts to help you stay prepared for any weather conditions.",
               image: "/assets/images/weather.png",
             },
           ].map((project, index) => (
