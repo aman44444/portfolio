@@ -10,8 +10,8 @@ const Body = () => {
           
           </div>
             <Image
-                src='/assets/images/front.jpg'
-                alt="Profile pic"
+                src='/assets/images/profilepicture.jpg'
+                alt="Profile picture"
                 width={250}
                 height={250}
                 className="rounded-full mt-8"
