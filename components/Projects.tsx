@@ -1,8 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import Image from "next/image";
 
-function Project({ isProjectVisible, onClose }) {
+const Project =({ isProjectVisible, onClose }) => {
   if (!isProjectVisible) return null;
 
   return (
@@ -30,9 +29,14 @@ function Project({ isProjectVisible, onClose }) {
               image: "/assets/images/wordle.png",
             },
             {
+              title: "LyricLink",
+              description: "Matches users based on their music taste.Utilized Spotify API to fetch and analyze user music preferences.",
+              image: "/assets/images/lyriclink.png",
+            },
+            {
               title: "TodoList",
               description: "A versatile to-do list app equipped with an alarm feature, designed to help you manage tasks efficiently and stay on schedule.",
-              image: "/assets/images/todolist.png",
+              image: "/assets/images/todoist.png",
             },
             {
               title: "Foodgram",
@@ -54,9 +58,7 @@ function Project({ isProjectVisible, onClose }) {
                 backgroundSize: "contain",
                
               }}
-            >
-              
-               
+            > 
               <Card title={project.title} description={project.description} />
               
             </div>
