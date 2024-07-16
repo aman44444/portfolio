@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const Card = ({ title, description }) => {
+const Card = ({ title, description,projectLink , githubLink }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpansion = () => {
@@ -23,7 +23,27 @@ const Card = ({ title, description }) => {
       <div className="p-4">
         <h2 className="text-lg font-semibold">{title}</h2>
         {isExpanded && (
-          <p className="text-gray-600 mt-2 text-xs rounded-t-xl">{description}</p>
+          <div className="mt-2 text-xs md:text-sm">
+          <p className="text-gray-600">{description}</p>
+          <div className="mt-4">
+            <a
+              href={projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 no-underline mr-2"
+            >
+              View Project
+            </a>
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 no-underline"
+            >
+              View Code
+            </a>
+          </div>
+        </div>
         )}
       </div>
     </motion.div>
@@ -31,3 +51,4 @@ const Card = ({ title, description }) => {
 };
 
 export default Card;
+

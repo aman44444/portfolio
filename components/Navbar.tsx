@@ -58,7 +58,9 @@ const Navbar = () => {
               </li>
              
               <li className="mb-4 text-xl font-semibold">
-                <a className=" text-gray-700 cursor-pointer">
+                <a 
+                 href="mailto:amancorp04@gmail.com"
+                 className=" text-gray-700 cursor-pointer">
                   Contact
                 </a>
               </li>
