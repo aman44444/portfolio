@@ -1,75 +1,86 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react';
-import About from './About';
-import Project from './Projects';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
+import React from "react";
+import About from "./About";
+import Project from "./Projects";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showModal , setShowModal] =useState(false)
-  const [showProject , setShowProject] =useState(false)
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+  const [showModal, setShowModal] = useState(false);
+  const [showProject, setShowProject] = useState(false);
 
   return (
     <div className="relative">
-      
-      <span className='text-3xl cursor-pointer m-8 absolute text-gray-700' onClick={toggleNavbar}>&#9776;</span>
+      <div className="w-full flex justify-center mt-8 absolute ">
+        <IoIosArrowDown
+          size={60}
+          className={`cursor-pointer transition-transform duration-300 
+            ${
+              isOpen ? "rotate-180" : "rotate-0"
+            } text-gray-400 hover:text-gray-900`}
+          onClick={() => setIsOpen(!isOpen)}
+        />
+      </div>
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-0 left-0 h-1/7 w-full bg-white shadow-md overflow-y-auto flex items-center justify-center"
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{duration: 0.7}}
+            className="  z-40 fixed top-0 left-0 h-1/7 w-full bg-white shadow-md overflow-y-auto flex items-center justify-center flex-col rounded-b-3xl"
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
           >
-            <button
-              className="absolute  top-4 right-4 text-gray-500 bg-white rounded-full "
-              onClick={toggleNavbar}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            <ul className="py-8 px-4 flex gap-10  ">
-              <li className="mb-4 text-xl font-semibold">
-                <a  className="  text-gray-700 cursor-pointer" onClick={()=> setShowModal(true)}>
+            <ul className="px-2 py-2 flex gap-10 mt-2">
+              <li className=" text-xl font-semibold">
+                <a
+                  className="  text-gray-700 cursor-pointer"
+                  onClick={() => setShowModal(true)}
+                >
                   About
                 </a>
               </li>
-              <li className="mb-4 text-xl font-semibold">
-                <a className=" text-gray-700 cursor-pointer" onClick={()=>setShowProject(true)}>
+              <li className=" text-xl font-semibold">
+                <a
+                  className=" text-gray-700 cursor-pointer"
+                  onClick={() => setShowProject(true)}
+                >
                   Projects
                 </a>
               </li>
-             
-              <li className="mb-4 text-xl font-semibold">
-                <a 
-                 href="mailto:amancorp04@gmail.com"
-                 className=" text-gray-700 cursor-pointer">
+
+              <li className="text-xl font-semibold">
+                <a
+                  href="mailto:amancorp04@gmail.com"
+                  className=" text-gray-700 cursor-pointer"
+                >
                   Contact
                 </a>
               </li>
             </ul>
+            <div className=" m-2">
+              <motion.div
+                initial={{ rotate: 180 }}
+                animate={{ rotate: 180 }}
+                exit={{ rotate: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <IoIosArrowDown
+                  size={30}
+                  className="cursor-pointer text-gray-400 hover:text-gray-900"
+                  onClick={() => setIsOpen(false)}
+                />
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-      <About isVisible={showModal} onClose={()=>setShowModal(false)}/>
-      <Project isProjectVisible={showProject} onClose={() => setShowProject(false)}/>
+      <About isVisible={showModal} onClose={() => setShowModal(false)} />
+      <Project
+        isProjectVisible={showProject}
+        onClose={() => setShowProject(false)}
+      />
     </div>
   );
 };
