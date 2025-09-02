@@ -45,7 +45,7 @@ const Project =({ isProjectVisible, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center" id="wrapper">
-      <div className="w-11/12 md:w-3/4 h-4/5 md:h-3/4 bg-white rounded-xl relative overflow-auto">
+      <div className="w-11/12 md:mt-10 md:w-3/4 h-4/5 md:h-3/4 bg-white rounded-xl relative overflow-auto">
         <div className="bg-gray-200 w-full h-1/4 rounded-t-xl text-2xl md:text-3xl flex items-center justify-between px-4 md:px-6 py-4">
           <h2 className="font-semibold">Projects</h2>
           <button
