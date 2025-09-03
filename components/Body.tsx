@@ -15,6 +15,7 @@ const Body = () => {
                 width={250}
                 height={250}
                 className="rounded-full mt-8"
+                priority
             />
             <p className="mt-5 text-lg font-semibold font-lato text-gray-500">Frontend developer | Open Source Contributor </p>
        
