@@ -69,11 +69,12 @@ const About = ({ isVisible, onClose }) => {
           <div className="mt-4 md:mt-8">
             <h3 className="text-lg md:text-xl font-semibold">Description</h3>
             <p className="text-gray-400 mt-2 text-sm md:text-base">
-              I recently graduated with a Bachelor's degree in Electrical and
-              Electronics Engineering. I am passionate about frontend
-              development and have actively contributed to open-source projects,
-              collaborating with developers worldwide. I'm excited to bring my
-              skills to a dynamic role where I can continue to learn and grow.
+              I recently graduated with a Bachelor of Technology degree in
+              Electrical and Electronics Engineering. I am passionate about
+              frontend development and actively contribute to open-source
+              projects, collaborating with developers around the world. I look
+              forward to applying my skills in a meaningful role while
+              continuing to learn and grow.
             </p>
           </div>
         </div>
