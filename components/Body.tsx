@@ -17,7 +17,7 @@ const Body = () => {
                 className="rounded-full mt-8"
                 priority
             />
-            <p className="mt-5 text-lg font-semibold font-lato text-gray-500">Frontend developer | Open Source Contributor </p>
+            <p className="mt-5 md:text-lg text-sm font-semibold font-lato text-gray-500">Frontend developer | Open Source Contributor </p>
        
         </div>
 

@@ -20,6 +20,13 @@ const Project =({ isProjectVisible, onClose }) => {
       projectLink: "https://lyriclink.vercel.app",
     },
     {
+      title: "ScoreSource",
+      description: "A real-time sports score platform delivering live updates, match details, trending players, and top sports tweets in one clean interface.",
+      image: "/assets/images/scoresource.png",
+      githubLink: "https://github.com/aman44444/scoresource",
+      projectLink: "https://scoresource.vercel.app",
+    },
+    {
       title: "TodoList",
       description: "A versatile to-do list app equipped with an alarm feature, designed to help you manage tasks efficiently and stay on schedule.",
       image: "/assets/images/todoist.png",
@@ -33,13 +40,14 @@ const Project =({ isProjectVisible, onClose }) => {
       githubLink: "https://github.com/aman44444/foodgram",
       projectLink: "https://foodgramm.netlify.app",
     },
-    {
-      title: "Weather App",
-      description: "A sleek weather web app that provides accurate, real-time forecasts to help you stay prepared for any weather conditions.",
-      image: "/assets/images/weatherReport.png",
-      githubLink: "https://github.com/aman44444/weatherupdate",
-      projectLink: "https://weathereportt.netlify.app",
+      {
+      title: "Simple Pomodoro Extension",
+      description: "A lightweight and clean Chrome Extension that helps you stay productive using the Pomodoro Technique.",
+      image: "/assets/images/extensionPreview.png",
+      githubLink: "https://github.com/aman44444/simplepomodoroextension",
+
     },
+    
   ];
 
 
