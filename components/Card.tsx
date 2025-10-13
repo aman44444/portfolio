@@ -20,11 +20,11 @@ const Card = ({ title, description,projectLink , githubLink }) => {
       role="button"
       aria-expanded={isExpanded}
     >
-      <div className="p-4">
-        <h2 className="text-lg font-semibold">{title}</h2>
+      <div className="p-6">
+        <h2 className="text-base font-semibold">{title}</h2>
         {isExpanded && (
           <div className="mt-2 text-xs md:text-sm">
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 text-xs">{description}</p>
           <div className="mt-4">
             <a
               href={projectLink}
