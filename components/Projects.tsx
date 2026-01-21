@@ -45,13 +45,6 @@ const Project = ({ isProjectVisible, onClose }) => {
       githubLink: "https://github.com/aman44444/foodgram",
       projectLink: "https://foodgramm.netlify.app",
     },
-    {
-      title: "Simple Pomodoro Extension",
-      description:
-        "A lightweight and clean Chrome Extension that helps you stay productive using the Pomodoro Technique.",
-      image: "/assets/images/extensionPreview.png",
-      githubLink: "https://github.com/aman44444/simplepomodoroextension",
-    },
   ];
 
   return (
