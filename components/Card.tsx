@@ -18,14 +18,19 @@ const Card: React.FC<CardProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="relative w-full rounded-xl h-[160px] overflow-hidden shadow-xl ">
+    <div
+      className="relative w-full rounded-xl h-[160px] overflow-hidden shadow-xl "
+      onMouseLeave={() => setIsExpanded(false)}
+    >
       <motion.div
         className="absolute -inset-[2px] bg-white "
         initial={{
           clipPath: "circle(0% at 24px 24px)",
         }}
         animate={{
-          clipPath: isExpanded ? "circle(150% at 24px 24px)" : "circle(0% at 24px 24px)",
+          clipPath: isExpanded
+            ? "circle(150% at 24px 24px)"
+            : "circle(0% at 24px 24px)",
         }}
         transition={{
           duration: 0.7,
@@ -35,7 +40,6 @@ const Card: React.FC<CardProps> = ({
       <div className="absolute mt-3 z-20">
         <div
           onMouseEnter={() => setIsExpanded(true)}
-          onMouseLeave={() => setIsExpanded(false)}
           className="
             px-2 py-[2px]
             bg-white
