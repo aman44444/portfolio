@@ -22,10 +22,10 @@ const Card: React.FC<CardProps> = ({
       <motion.div
         className="absolute -inset-[2px] bg-white "
         initial={{
-          clipPath: "inset(0 100% 100% 0)",
+          clipPath: "circle(0% at 24px 24px)",
         }}
         animate={{
-          clipPath: isExpanded ? "inset(0 0 0 0 )" : "inset(0 100% 100% 0)",
+          clipPath: isExpanded ? "circle(150% at 24px 24px)" : "circle(0% at 24px 24px)",
         }}
         transition={{
           duration: 0.7,
