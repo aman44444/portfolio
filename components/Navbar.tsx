@@ -9,13 +9,14 @@ type ActiveModal = "about" | "projects" | null;
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeModal, setActiveModal] = useState<ActiveModal>(null);
+  const [activeModal, setActiveModal] = useState<ActiveModal>(null)
+  const [pendingModal, setPendingModal] = useState<ActiveModal>(null);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
   const openModal = (modal: ActiveModal) => {
-    setActiveModal(modal);
+      setPendingModal(modal);
     closeMenu();
   };
 
@@ -36,7 +37,14 @@ const Navbar = () => {
         </motion.div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence
+          onExitComplete={() => {
+          if (pendingModal) {
+            setActiveModal(pendingModal);
+            setPendingModal(null);
+          }
+        }}
+      >
         {isMenuOpen && (
           <motion.nav
             className="fixed top-0 left-0 z-40 w-full bg-white shadow-md
