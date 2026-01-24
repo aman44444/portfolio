@@ -1,6 +1,6 @@
 export type ActiveModal = "about" | "projects" | null;
 
-export type ModalProps = {
+export type AboutProps = {
   isVisible: boolean;
   onClose: () => void;
 };

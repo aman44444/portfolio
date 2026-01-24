@@ -4,36 +4,49 @@ import { MdLocationOn } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BiLogoGmail } from "react-icons/bi";
+import { AboutProps } from "@/types/modal";
 
-const About = ({ isVisible, onClose }) => {
+
+const About = ({ isVisible, onClose }: AboutProps) => {
   if (!isVisible) return null;
 
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center"
-      id="wrapper"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="about-title"
     >
       <div className="relative md:mt-10 w-11/12 md:w-3/4 h-3/5 md:h-3/4 bg-white rounded-xl overflow-auto">
-        <div className="w-full h-1/4 rounded-t-xl text-2xl md:text-3xl flex items-center justify-between px-4 md:px-6 py-4">
-          <h2 className="font-semibold">About</h2>
-          <button
-            className="text-black hover:bg-gray-200 font-bold text-sm border-2 rounded-full h-8 w-8 flex items-center justify-center"
-            onClick={() => onClose()}
-            aria-label="Close"
+         <header className="flex  h-1/6 items-center justify-between px-4 md:px-6 py-4">
+          <h2
+            id="about-title"
+            className="text-2xl md:text-3xl font-semibold"
           >
-            X
+            About
+          </h2>
+
+          <button
+            onClick={onClose}
+            aria-label="Close about modal"
+            className="h-8 w-8 rounded-full border-2 flex items-center justify-center
+                       hover:bg-gray-200 transition"
+          >
+            ✕
           </button>
-        </div>
-        <hr className="w-full h-[1px] bg-gray-300" />
-        <hr className="w-full h-[1px] bg-gray-300 mt-[3px]" />
-        <div className="flex flex-col items-start mt-4 md:mt-8 px-4 md:px-8">
+        </header>
+
+        <div className="border-t border-gray-300 mt-1" />
+
+         <section className="flex flex-col gap-6 mt-6 px-4 md:px-8">  
           <div className="flex gap-6">
             <Image
               src="/assets/images/profilepicture.jpg"
               alt="Profile pic"
               width={100}
               height={100}
-              className="rounded-md mb-4"
+              priority
+              className="rounded-md"
             />
             <div>
               <h3 className="text-lg md:text-xl font-semibold ml-[2px]">
@@ -83,7 +96,7 @@ const About = ({ isVisible, onClose }) => {
               continuing to learn and grow.
             </p>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
