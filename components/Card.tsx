@@ -1,13 +1,8 @@
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { CardProps } from "@/types/card";
 import React from "react";
-
-interface CardProps {
-  title: string;
-  description: string;
-  projectLink: string;
-  githubLink: string;
-}
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -15,12 +10,12 @@ const Card: React.FC<CardProps> = ({
   projectLink,
   githubLink,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div
       className="relative w-full rounded-xl h-[160px] overflow-hidden shadow-xl "
-      onMouseLeave={() => setIsExpanded(false)}
+      onMouseLeave={() => setExpanded(false)}
     >
       <motion.div
         className="absolute -inset-[2px] bg-white "
@@ -28,7 +23,7 @@ const Card: React.FC<CardProps> = ({
           clipPath: "circle(0% at 24px 24px)",
         }}
         animate={{
-          clipPath: isExpanded
+          clipPath: expanded
             ? "circle(150% at 24px 24px)"
             : "circle(0% at 24px 24px)",
         }}
@@ -38,8 +33,8 @@ const Card: React.FC<CardProps> = ({
         }}
       />
       <div className="absolute mt-3 z-20">
-        <div
-          onMouseEnter={() => setIsExpanded(true)}
+        <button
+          onMouseEnter={() => setExpanded(true)}
           className="
             px-2 py-[2px]
             bg-white
@@ -50,9 +45,10 @@ const Card: React.FC<CardProps> = ({
             select-none
             shadow-md
           "
+           aria-expanded={expanded}
         >
           {title}
-        </div>
+        </button>
       </div>
 
       <motion.div
@@ -69,12 +65,12 @@ const Card: React.FC<CardProps> = ({
         "
         initial={{ opacity: 0, y: 8 }}
         animate={{
-          opacity: isExpanded ? 1 : 0,
-          y: isExpanded ? 0 : 8,
+          opacity: expanded ? 1 : 0,
+          y: expanded ? 0 : 8,
         }}
         transition={{
           duration: 0.3,
-          delay: isExpanded ? 0.35 : 0,
+          delay: expanded ? 0.35 : 0,
         }}
       >
         <p className="text-xs text-gray-700 leading-relaxed">{description}</p>
