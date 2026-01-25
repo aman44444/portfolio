@@ -58,7 +58,7 @@ const Project = ({ isProjectVisible, onClose }: ProjectModalProps) => {
       <div className="relative w-11/12 md:w-3/4 h-4/5 md:h-3/4 bg-white rounded-xl overflow-auto
                       [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 
-        <header className="flex items-center justify-between px-4 md:px-6 py-4">
+        <header className="h-1/6 flex items-center justify-between px-4 md:px-6 py-4">
           <h2
             id="projects-title"
             className="text-2xl md:text-3xl font-semibold"
@@ -76,7 +76,6 @@ const Project = ({ isProjectVisible, onClose }: ProjectModalProps) => {
           </button>
         </header>
 
-        <div className="border-t border-gray-300 mt-1" />
         <div className="border-t border-gray-300 mt-1" />
 
         <section className="flex flex-wrap justify-center gap-6 p-6">
