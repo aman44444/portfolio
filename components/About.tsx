@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { MdLocationOn } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
+// import { BsTwitter } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { AboutProps } from "@/types/modal";
 
@@ -73,7 +74,8 @@ const About = ({ isVisible, onClose }: AboutProps) => {
                   aria-label="Twitter"
                   className="text-xl"
                 >
-                  <BsTwitter />
+                  {/* <BsTwitter /> */}
+                  <FaXTwitter />
                 </a>
                 <a
                   href="mailto:amancorp04@gmail.com"
