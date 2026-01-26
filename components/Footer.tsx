@@ -1,6 +1,5 @@
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
-// import { BsTwitter } from 'react-icons/bs';
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from 'react-icons/bi';
 import '../app/globals.css';
@@ -25,7 +24,6 @@ const Footer = () => {
       aria-label="Twitter"
       className="m-2 text-gray-500 hover:text-black text-2xl"
       >
-        {/* <BsTwitter  /> */}
         <FaXTwitter />
       </a>
       <a 
