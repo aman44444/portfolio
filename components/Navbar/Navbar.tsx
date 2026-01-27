@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import About from "../About";
 import Project from "../Projects";
+import { PROJECTS } from "@/data/projects";
 
 type ActiveModal = "about" | "projects" | null;
 
@@ -104,6 +105,7 @@ const Navbar = () => {
       <Project
         isProjectVisible={activeModal === "projects"}
         onClose={closeModal}
+        projects={PROJECTS}
       />
     </div>
   );
