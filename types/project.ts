@@ -7,6 +7,6 @@ export type ProjectItem = {
 };
 
 export type ProjectModalProps = {
-  isProjectVisible: boolean;
+  isOpen: boolean;
   onClose: () => void;
 };

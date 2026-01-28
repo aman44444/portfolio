@@ -101,9 +101,9 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      <About isVisible={activeModal === "about"} onClose={closeModal} />
+      <About isOpen={activeModal === "about"} onClose={closeModal} />
       <Project
-        isProjectVisible={activeModal === "projects"}
+        isOpen={activeModal === "projects"}
         onClose={closeModal}
         projects={PROJECTS}
       />
