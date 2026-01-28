@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
-import { AboutProps } from "@/types/modal";
+import { AboutProps } from "@/types/about";
 
 
 const About = ({ isVisible, onClose }: AboutProps) => {
