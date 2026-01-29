@@ -49,7 +49,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <motion.nav
             className="fixed top-0 left-0 z-40 w-full bg-white shadow-md
-                       flex flex-col items-center rounded-b-3xl"
+                       flex flex-col items-center"
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
