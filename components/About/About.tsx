@@ -5,7 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { AboutProps } from "@/types/about";
-import Modal from "./Modal/Modal";
+import Modal from "../Modal/Modal";
 
 const About = ({ isOpen, onClose }: AboutProps) => {
   if (!isOpen) return null;
