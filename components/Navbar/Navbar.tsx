@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import About from "../About/About";
 import Project from "../Projects";
-import { PROJECTS } from "@/data/projects";
+import { PROJECTS } from "@/data/projectsData";
 
 type ActiveModal = "about" | "projects" | null;
 

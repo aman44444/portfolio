@@ -2,7 +2,7 @@ import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from 'react-icons/bi';
-import '../app/globals.css';
+import '../../app/globals.css'
 
 const Footer = () => {
   const style = { margin: '0.5rem' };
