@@ -45,7 +45,7 @@ const Card: React.FC<CardProps> = ({
             select-none
             shadow-md
           "
-           aria-expanded={expanded}
+          aria-expanded={expanded}
         >
           {title}
         </button>
