@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import About from "../About/About";
-import Project from "../Projects";
+import Project from "../Projects/Projects";
 import { PROJECTS } from "@/data/projectsData";
+import { ActiveModal } from "@/types/about";
 
-type ActiveModal = "about" | "projects" | null;
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,17 +24,19 @@ const Navbar = () => {
   const closeModal = () => setActiveModal(null);
 
   return (
-    <div className="relative">
-      <div className="absolute w-full flex justify-center mt-8">
+    <header className="relative">
+      <div className="absolute w-full flex justify-center mt-5 md:mt-8">
         <motion.div
           animate={{ rotate: isMenuOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <IoIosArrowDown
-            size={60}
-            onClick={toggleMenu}
-            className="cursor-pointer text-gray-400 hover:text-gray-900"
-          />
+          <button  onClick={toggleMenu} aria-label="Toggle menu">
+             <IoIosArrowDown
+              size={60}
+              className="cursor-pointer text-gray-400 hover:text-gray-900"
+             />
+          </button>
+
         </motion.div>
       </div>
 
@@ -55,7 +57,7 @@ const Navbar = () => {
             exit={{ y: "-100%" }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
-            <ul className="flex gap-10 py-4">
+            <ul className="flex gap-10 pt-3 pb-[3px] md:py-4">
               <li>
                 <button
                   onClick={() => openModal("about")}
@@ -84,7 +86,7 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <button onClick={closeMenu} className="mb-3">
+            <button onClick={closeMenu} className="mb-2 md:mb-3">
               <motion.div
                 initial={{ rotate: 180 }}
                 animate={{ rotate: 180 }}
@@ -107,7 +109,7 @@ const Navbar = () => {
         onClose={closeModal}
         projects={PROJECTS}
       />
-    </div>
+    </header>
   );
 };
 

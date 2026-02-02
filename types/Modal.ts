@@ -1,3 +1,5 @@
+export type ActiveModal = "about" | "projects" | null;
+
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
