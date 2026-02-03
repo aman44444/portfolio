@@ -15,6 +15,15 @@ module.exports = {
       fontFamily: {
         sans: ['Source Sans 3', 'sans'],
       },
+       keyframes: {
+        lineReveal: {
+          "0%": { transform: "scaleX(0)", transformOrigin: "left" },
+          "100%": { transform: "scaleX(1)", transformOrigin: "left" },
+        },
+      },
+      animation: {
+        lineReveal: "lineReveal 1.5s ease-out forwards",
+      },
     },
   },
   plugins: [],
