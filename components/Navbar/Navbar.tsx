@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import About from "../About/About";
 import Project from "../Projects/Projects";
-import { PROJECTS } from "@/data/projectsData";
-import { ActiveModal } from "@/types/about";
+import { PROJECTS } from "../../data/projectsData";
+import { ActiveModal } from "../../types/Modal"
 
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { ModalProps } from "@/types/Modal";
+import { ModalProps } from "../../types/Modal"
 
 const Modal = ({
   isOpen,

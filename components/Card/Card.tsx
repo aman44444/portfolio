@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CardProps } from "@/types/card";
+import { CardProps } from "../../types/card";
 import React from "react";
 
 const Card: React.FC<CardProps> = ({
