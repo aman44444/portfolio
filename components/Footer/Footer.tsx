@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
+
 
 const Footer = () => {
   return (
@@ -17,6 +19,7 @@ const Footer = () => {
           <BsGithub />
         </a>
         <a
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
@@ -34,7 +37,7 @@ const Footer = () => {
     </div>
      <div className="w-[115px]
           h-[1px]
-        bg-gray-500  
+        bg-gray-400  
           origin-left
           animate-lineReveal
           motion-reduce:animate-none"/>
