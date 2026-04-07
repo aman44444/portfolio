@@ -32,7 +32,7 @@ A modern, fully responsive developer portfolio built with **Next.js**, **TypeScr
 
 ---
 
-## 🧠 What I Learned
+##  What I Learned
 
 * Building scalable frontend architecture with Next.js
 * Writing clean and maintainable TypeScript code
