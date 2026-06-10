@@ -10,6 +10,11 @@ A modern, fully responsive developer portfolio built with **Next.js**, **TypeScr
 
 ---
 
+## Screenshots
+
+ ![Home](./public/assets/images/Readme/Home.png)
+ ![Projects](./public/assets/images/Readme/Projects.png)
+
 ##  Features
 
 *  **Fast & Optimized** – Built with Next.js for SSR/SSG performance
