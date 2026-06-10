@@ -41,6 +41,14 @@ export const PROJECTS: ProjectItem[] = [
     githubLink: "https://github.com/aman44444/foodgram",
     projectLink: "https://foodgramm.netlify.app",
   },
+    {
+    title: "ResumeMirror",
+    description:
+      "AI-powered resume tool that analyzes resumes against job descriptions and suggests improvements.",
+    image: "/assets/images/resumemirror.png",
+    githubLink: "https://github.com/aman44444/resumemirror",
+    projectLink: "https://resumemirror.vercel.app/",
+  },
 ];
 
 
