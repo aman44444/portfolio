@@ -10,7 +10,7 @@ const Body = () => {
           </div>
             <div className="my-6">
                 <Image
-                src='/assets/images/profilepicture.jpg'
+                src='/assets/images/Profile/Profile.jpg'
                 alt="Profile picture"
                 width={250}
                 height={250}

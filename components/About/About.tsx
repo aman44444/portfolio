@@ -21,7 +21,7 @@ const About = ({ isOpen, onClose }: AboutProps) => {
       <section className="flex flex-col gap-6 mt-6 px-4 md:px-8">
         <div className="flex gap-6">
           <Image
-            src="/assets/images/profilepicture.jpg"
+            src="/assets/images/Profile/Profile.jpg"
             alt="Profile pic"
             width={100}
             height={100}
