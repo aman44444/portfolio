@@ -5,7 +5,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "WordleXkbc",
     description:
       "A unique Wordle clone infused with the excitement of 'Kaun Banega Crorepati,' combining word guessing with thrilling quiz elements",
-    image: "/assets/images/wordle.png",
+    image: "/assets/images/Projects/wordle.png",
     githubLink: "https://github.com/aman44444/WordlexKbc",
     projectLink: "https://wordlexkbc.netlify.app",
   },
@@ -13,7 +13,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "LyricLink",
     description:
       "Matches users based on their music taste. Utilized Spotify API to fetch and analyze user music preferences.",
-    image: "/assets/images/lyriclink.png",
+    image: "/assets/images/Projects/lyriclink.png",
     githubLink: "https://github.com/aman44444/LyricLink",
     projectLink: "https://lyriclink.vercel.app",
   },
@@ -21,7 +21,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "ScoreSource",
     description:
       "A real-time sports score platform delivering live updates, match details, trending players, and top sports tweets in one clean interface.",
-    image: "/assets/images/scoresource.png",
+    image: "/assets/images/Projects/scoresource.png",
     githubLink: "https://github.com/aman44444/scoresource",
     projectLink: "https://scoresource.vercel.app",
   },
@@ -29,7 +29,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Todoist",
     description:
       "A versatile to-do list app equipped with an alarm feature, designed to help you manage tasks efficiently and stay on schedule.",
-    image: "/assets/images/todoist.png",
+    image: "/assets/images/Projects/todoist.png",
     githubLink: "https://github.com/aman44444/todolist",
     projectLink: "https://todooist.netlify.app",
   },
@@ -37,7 +37,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Foodgram",
     description:
       "An intuitive food delivery web app offering a seamless user experience, designed to bring your favorite meals right to your doorstep.",
-    image: "/assets/images/foodgram.png",
+    image: "/assets/images/Projects/foodgram.png",
     githubLink: "https://github.com/aman44444/foodgram",
     projectLink: "https://foodgramm.netlify.app",
   },
@@ -45,7 +45,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "ResumeMirror",
     description:
       "AI-powered resume tool that analyzes resumes against job descriptions and suggests improvements.",
-    image: "/assets/images/resumemirror.png",
+    image: "/assets/images/Projects/resumemirror.png",
     githubLink: "https://github.com/aman44444/resumemirror",
     projectLink: "https://resumemirror.vercel.app/",
   },
