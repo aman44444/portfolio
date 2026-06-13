@@ -26,14 +26,14 @@ const Navbar = () => {
 
   return (
     <header className="relative">
-      <div className="absolute w-full flex justify-center mt-5 md:mt-8">
+      <div className="absolute w-full flex justify-center mt-10 md:mt-16">
         <motion.div
           animate={{ rotate: isMenuOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
           <button  onClick={toggleMenu} aria-label="Toggle menu">
              <IoIosArrowDown
-              size={60}
+              size={30}
               className="cursor-pointer text-gray-400 hover:text-gray-900"
              />
           </button>
@@ -51,7 +51,7 @@ const Navbar = () => {
       >
         {isMenuOpen && (
           <motion.nav
-            className="fixed top-0 left-0 z-40 w-full bg-white shadow-md
+            className="fixed top-0 left-0 z-40 w-full 
                        flex flex-col items-center"
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
@@ -62,7 +62,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={() => openModal("about")}
-                  className="text-xl font-semibold text-gray-700 hover:text-gray-900"
+                  className="text-lg text-gray-500 hover:text-gray-900"
                 >
                   About
                 </button>
@@ -71,7 +71,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={() => openModal("projects")}
-                  className="text-xl font-semibold text-gray-700 hover:text-gray-900"
+                  className="text-lg text-gray-500 hover:text-gray-900"
                 >
                   Projects
                 </button>
@@ -80,26 +80,12 @@ const Navbar = () => {
               <li>
                 <a
                   href="mailto:amancorp04@gmail.com"
-                  className="text-xl font-semibold text-gray-700 hover:text-gray-900"
+                  className="text-lg text-gray-500 hover:text-gray-900"
                 >
                   Contact
                 </a>
               </li>
             </ul>
-
-            <button onClick={closeMenu} className="mb-2 md:mb-3">
-              <motion.div
-                initial={{ rotate: 180 }}
-                animate={{ rotate: 180 }}
-                exit={{ rotate: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <IoIosArrowDown
-                  size={30}
-                  className="text-gray-400 hover:text-gray-900"
-                />
-              </motion.div>
-            </button>
           </motion.nav>
         )}
       </AnimatePresence>
