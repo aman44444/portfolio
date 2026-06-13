@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { MdLocationOn } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
@@ -30,17 +29,13 @@ const About = ({ isOpen, onClose }: AboutProps) => {
           />
           <div>
             <h3 className="text-lg md:text-xl font-semibold ml-[2px]">Aman</h3>
-            <p className="text-gray-400 text-xs md:text-sm flex items-center mt-[4px]">
-              <MdLocationOn className="text-black text-lg md:text-xl" /> Bhopal,
-              Madhya Pradesh
-            </p>
             <div className="flex gap-3 mt-3 md:mt-4">
               <a
                 href="https://github.com/aman44444"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="text-xl"
+                className="text-xl text-gray-500 hover:text-black"
               >
                 <BsGithub />
               </a>
@@ -49,14 +44,14 @@ const About = ({ isOpen, onClose }: AboutProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="text-xl"
+                className="text-xl text-gray-500 hover:text-black"
               >
                 <FaXTwitter />
               </a>
               <a
                 href="mailto:amancorp04@gmail.com"
                 aria-label="Email"
-                className="text-xl"
+                className="text-2xl text-gray-500 hover:text-black"
               >
                 <BiLogoGmail />
               </a>
@@ -66,12 +61,10 @@ const About = ({ isOpen, onClose }: AboutProps) => {
         <div className="mt-4 md:mt-8">
           <h3 className="text-lg md:text-xl font-semibold">Description</h3>
           <p className="text-gray-400 mt-2 text-sm md:text-base">
-            I recently graduated with a Bachelor of Technology degree in
-            Electrical and Electronics Engineering. I am passionate about
-            frontend development and actively contribute to open-source
-            projects, collaborating with developers around the world. I look
-            forward to applying my skills in a meaningful role while continuing
-            to learn and grow.
+            Frontend Developer focused on crafting modern, accessible, 
+            and high-performance web experiences. 
+            I build scalable applications using React.js, Next.js, TypeScript,
+            and Tailwind CSS, with a strong emphasis on clean code and great user experience.
           </p>
         </div>
       </section>
