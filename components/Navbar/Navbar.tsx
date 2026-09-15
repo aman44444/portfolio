@@ -1,24 +1,23 @@
-"use client"
-import React from "react"
+"use client";
+import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import About from "../About/About";
 import Project from "../Projects/Projects";
 import { PROJECTS } from "../../data/projectsData";
-import { ActiveModal } from "../../types/Modal"
-
+import { ActiveModal } from "../../types/Modal";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeModal, setActiveModal] = useState<ActiveModal>(null)
+  const [activeModal, setActiveModal] = useState<ActiveModal>(null);
   const [pendingModal, setPendingModal] = useState<ActiveModal>(null);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
   const openModal = (modal: ActiveModal) => {
-      setPendingModal(modal);
+    setPendingModal(modal);
     closeMenu();
   };
 
@@ -31,18 +30,17 @@ const Navbar = () => {
           animate={{ rotate: isMenuOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <button  onClick={toggleMenu} aria-label="Toggle menu">
-             <IoIosArrowDown
+          <button onClick={toggleMenu} aria-label="Toggle menu">
+            <IoIosArrowDown
               size={30}
               className="cursor-pointer text-gray-400 hover:text-gray-900"
-             />
+            />
           </button>
-
         </motion.div>
       </div>
 
       <AnimatePresence
-          onExitComplete={() => {
+        onExitComplete={() => {
           if (pendingModal) {
             setActiveModal(pendingModal);
             setPendingModal(null);
@@ -62,27 +60,69 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={() => openModal("about")}
-                  className="text-lg text-gray-500 hover:text-gray-900"
+                  className="group relative text-lg text-gray-500 hover:text-gray-900"
                 >
                   About
+                  <span
+                    className="
+          absolute
+          left-0
+          -bottom-1
+          h-[1px]
+          w-0
+          bg-gray-900
+          transition-all
+          duration-700
+          ease-in-out
+          group-hover:w-full
+        "
+                  />
                 </button>
               </li>
 
               <li>
                 <button
                   onClick={() => openModal("projects")}
-                  className="text-lg text-gray-500 hover:text-gray-900"
+                  className="group relative text-lg text-gray-500 hover:text-gray-900"
                 >
                   Projects
+                  <span
+                    className="
+          absolute
+          left-0
+          -bottom-1
+          h-[1px]
+          w-0
+          bg-gray-900
+          transition-all
+          duration-700
+          ease-in-out
+          group-hover:w-full
+        "
+                  />
                 </button>
               </li>
 
               <li>
                 <a
                   href="mailto:amancorp04@gmail.com"
-                  className="text-lg text-gray-500 hover:text-gray-900"
+                  className="group relative text-lg text-gray-500 hover:text-gray-900"
                 >
                   Contact
+                  <span
+                    className="
+          absolute
+          left-0
+          -bottom-1
+          h-[1px]
+          w-0
+          bg-gray-900
+          transition-all
+          duration-700
+          ease-in-out
+          group-hover:w-full
+        "
+                  />
                 </a>
               </li>
             </ul>
