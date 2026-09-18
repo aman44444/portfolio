@@ -14,7 +14,7 @@ const Body = () => {
                 alt="Profile picture"
                 width={250}
                 height={250}
-                className="rounded-full"
+                className="rounded-md"
                 priority
             />
             </div>
