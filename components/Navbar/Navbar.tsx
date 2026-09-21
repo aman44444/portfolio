@@ -4,13 +4,11 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
-import About from "../About/About";
 import Project from "../Projects/Projects";
 import { PROJECTS } from "../../data/projectsData";
 import { ActiveModal } from "../../types/Modal";
 
 const navItems = [
-  { label: "About", modal: "about" as const },
   { label: "Projects", modal: "projects" as const },
 ];
 
@@ -104,16 +102,19 @@ const Navbar = () => {
                   <span className={underlineClass} />
                 </a>
               </li>
+                <li>
+                <a
+                  href="https://github.com/aman44444"
+                  className={navLinkClass}
+                >
+                  More
+                  <span className={underlineClass} />
+                </a>
+              </li>
             </ul>
           </motion.nav>
         )}
       </AnimatePresence>
-
-      {/* Modals */}
-      <About
-        isOpen={activeModal === "about"}
-        onClose={closeModal}
-      />
 
       <Project
         isOpen={activeModal === "projects"}
